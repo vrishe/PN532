@@ -32,9 +32,9 @@ int8_t SNEP::write(const uint8_t *buf, uint8_t len, uint16_t timeout)
 
 	// check SNEP version
 	if (SNEP_DEFAULT_VERSION != rbuf[0]) {
-		DMSG(F("The received SNEP message's major version is different, me: "));
+		DMSG(F("The received SNEP message's major version is different, my: "));
 		DMSG(SNEP_DEFAULT_VERSION);
-		DMSG(", their: ");
+		DMSG(", theirs: ");
 		DMSG(rbuf[0]);
 		DMSG("\n");
 		// To-do: send Unsupported Version response
