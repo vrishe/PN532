@@ -2,7 +2,8 @@
 #define __DEBUG_H__
 
 
-#include "Arduino.h"
+#include <Arduino.h>
+
 
 #ifdef DEBUG
 
@@ -32,7 +33,7 @@ Stream& __PN532_log();
 
 #define DMSG(args...)       __PN532_log().print		(args)
 #define DMSG_STR(str)       __PN532_log().println	(str)
-#define DMSG_HEX(num)       __PN532_log().print		(' '); __PN532_log().print(num, HEX)
+#define DMSG_HEX(num)       __PN532_log().print		(' '); __PN532_log().print((num), HEX)
 #define DMSG_INT(num)       __PN532_log().print		(' '); __PN532_log().print(num)
 
 #else
